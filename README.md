@@ -33,6 +33,8 @@ The user will enter simple mathematical expressions or commands. The user pressi
 
 For example, below the user entered `2+1`, then pressed [Enter]. The calculator printed out the answer `3` and reprinted the prompt, waiting for input from the user.
 
+(NOTE: My version must have spaces between the terms and operator)
+
 ```sh
 [0]> 2+1
    = 3
