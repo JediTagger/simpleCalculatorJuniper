@@ -72,5 +72,13 @@ namespace SimpleCaculatorTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void EvaluateCountWorks()
+        {
+            Evaluate test1 = new Evaluate();
+            test1.DoMath("4 + 2");
+            test1.DoMath("4 + 4");
+            Assert.AreEqual(2, test1.count);
+        }
     }
 }

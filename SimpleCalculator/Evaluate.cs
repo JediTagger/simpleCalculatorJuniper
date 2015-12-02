@@ -9,7 +9,7 @@ namespace SimpleCalculator
 {
     public class Evaluate
     {
-
+        public int count { get; set; }
         public int DoMath(string input)
         {
             int result = 0;
@@ -18,6 +18,7 @@ namespace SimpleCalculator
             int[] terms = test.ExtractTerms(input);
             int termOne = terms[0];
             int termTwo = terms[1];
+
             switch (op)
             {
                 case "+":
@@ -36,6 +37,7 @@ namespace SimpleCalculator
                     result = termOne % termTwo;
                     break;
             }
+        count++;
         return result;
         }
 

@@ -28,23 +28,21 @@ namespace SimpleCalculator
         {
             char[] delimiterChar = { ' ' };
             string[] expressionElements = input.Split(delimiterChar);
-            int fake1;
-            int fake2;
-            bool firstTermIsInt = int.TryParse(expressionElements[0], out fake1);
-            bool secondTermIsInt = int.TryParse(expressionElements[2], out fake2);
-
+            int firstTerm;
+            int secondTerm;
+            bool firstTermIsInt = int.TryParse(expressionElements[0], out firstTerm);
+            bool secondTermIsInt = int.TryParse(expressionElements[2], out secondTerm);
             if (firstTermIsInt && secondTermIsInt)
             {
-                int firstTerm = Int32.Parse(expressionElements[0]);
-                int secondTerm = Int32.Parse(expressionElements[2]);
                 int[] returnTerms = { firstTerm, secondTerm };
                 return returnTerms;
-            } 
+            }
             else
             {
                 throw new Exception("That's not a valid term.  Only integers are valid terms.");
             }
-
         }
+
+
     }
 }
